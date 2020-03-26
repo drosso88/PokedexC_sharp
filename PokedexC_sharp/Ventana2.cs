@@ -10,19 +10,22 @@ using System.Windows.Forms;
 
 namespace PokedexC_sharp
 {
-    public partial class Bienvenido : Form
+    public partial class Ventana2 : Form
     {
-        public Bienvenido()
+        public String nombrePokemon;
+        public Ventana2()
         {
             InitializeComponent();
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Ventana2_Load(object sender, EventArgs e)
+        {
 
-        { 
-            VentanaPrincipal vp = new VentanaPrincipal();
-            vp.Show();
-
+        }
+        public void cambiaNombrePokemon (String nombrePokemon)
+        {
+             label1.Text = nombrePokemon;
         }
     }
 }

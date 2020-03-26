@@ -19,6 +19,7 @@ namespace PokedexC_sharp
         public VentanaPrincipal()
         {
             InitializeComponent();
+           dataGridView1.DataSource = miConexion.getTodosPokemon();
         }
         private Image convierteBlobAImagen (byte[] img)
         {
@@ -44,6 +45,14 @@ namespace PokedexC_sharp
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Ventana2 v = new Ventana2();
+            v.cambiaNombrePokemon( "Bulbasaur");
+            v.Show();
         }
     }
 }

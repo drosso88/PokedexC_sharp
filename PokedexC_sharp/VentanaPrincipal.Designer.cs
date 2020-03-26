@@ -32,22 +32,26 @@
             this.izq = new System.Windows.Forms.Button();
             this.der = new System.Windows.Forms.Button();
             this.nombrePokemon = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(418, 368);
+            this.pictureBox1.Size = new System.Drawing.Size(279, 239);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // izq
             // 
-            this.izq.Location = new System.Drawing.Point(26, 416);
+            this.izq.Location = new System.Drawing.Point(17, 270);
+            this.izq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.izq.Name = "izq";
-            this.izq.Size = new System.Drawing.Size(190, 95);
+            this.izq.Size = new System.Drawing.Size(127, 62);
             this.izq.TabIndex = 1;
             this.izq.Text = "<";
             this.izq.UseVisualStyleBackColor = true;
@@ -55,9 +59,10 @@
             // 
             // der
             // 
-            this.der.Location = new System.Drawing.Point(254, 416);
+            this.der.Location = new System.Drawing.Point(169, 270);
+            this.der.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.der.Name = "der";
-            this.der.Size = new System.Drawing.Size(190, 95);
+            this.der.Size = new System.Drawing.Size(127, 62);
             this.der.TabIndex = 2;
             this.der.Text = ">";
             this.der.UseVisualStyleBackColor = true;
@@ -65,23 +70,35 @@
             // 
             // nombrePokemon
             // 
-            this.nombrePokemon.Location = new System.Drawing.Point(469, 26);
+            this.nombrePokemon.Location = new System.Drawing.Point(14, 341);
+            this.nombrePokemon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombrePokemon.Name = "nombrePokemon";
-            this.nombrePokemon.Size = new System.Drawing.Size(583, 63);
+            this.nombrePokemon.Size = new System.Drawing.Size(282, 41);
             this.nombrePokemon.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(301, 8);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(544, 360);
+            this.dataGridView1.TabIndex = 4;
             // 
             // VentanaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 602);
+            this.ClientSize = new System.Drawing.Size(847, 391);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.nombrePokemon);
             this.Controls.Add(this.der);
             this.Controls.Add(this.izq);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "VentanaPrincipal";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,6 +109,7 @@
         private System.Windows.Forms.Button izq;
         private System.Windows.Forms.Button der;
         private System.Windows.Forms.Label nombrePokemon;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
