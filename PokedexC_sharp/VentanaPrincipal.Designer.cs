@@ -40,7 +40,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(17, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(279, 239);
             this.pictureBox1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // izq
             // 
             this.izq.Location = new System.Drawing.Point(17, 270);
-            this.izq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.izq.Margin = new System.Windows.Forms.Padding(2);
             this.izq.Name = "izq";
             this.izq.Size = new System.Drawing.Size(127, 62);
             this.izq.TabIndex = 1;
@@ -60,7 +60,7 @@
             // der
             // 
             this.der.Location = new System.Drawing.Point(169, 270);
-            this.der.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.der.Margin = new System.Windows.Forms.Padding(2);
             this.der.Name = "der";
             this.der.Size = new System.Drawing.Size(127, 62);
             this.der.TabIndex = 2;
@@ -83,6 +83,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 360);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // VentanaPrincipal
             // 
@@ -94,7 +97,7 @@
             this.Controls.Add(this.der);
             this.Controls.Add(this.izq);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VentanaPrincipal";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

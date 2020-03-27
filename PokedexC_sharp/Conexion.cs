@@ -44,13 +44,42 @@ namespace PokedexC_sharp
                 conexion.Open();
                 MySqlCommand consulta =
                     //abrimos conexion, realizamos consulta, devuelve resulado que guarda en DataTable pokemons
-                    new MySqlCommand("SELECT nombre, especie FROM pokemon", conexion);
+                    new MySqlCommand("SELECT * FROM pokemon", conexion);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable pokemons = new DataTable();
                 pokemons.Load(resultado);
                 //cierra la conexion
                 conexion.Close();
                 return pokemons;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+        public String actualizaPokemon(String id, String dato)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand
+                    ("UPDATE pokemon set nombre ='"+ dato + "' WHERE id = '" +id+ "'",conexion);
+                   
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                String mensaje;
+                if (resultado.RecordsAffected == 1)
+                {
+                    mensaje = "Actualizado correctamente";
+                }
+                else
+                {
+                    mensaje = "Error al actualizar";
+                }
+
+               
+                //cierra la conexion
+                conexion.Close();
+                return mensaje;
             }
             catch (MySqlException e)
             {
