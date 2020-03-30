@@ -76,5 +76,17 @@ namespace PokedexC_sharp
             MessageBox.Show(miConexion.actualizaPokemon(id, nombre));
          
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            VSeleccionPokemon eligePokemon = new VSeleccionPokemon();
+            eligePokemon.ShowDialog();
+
+            // MessageBox.Show(eligePokemon.idSeleccionado.ToString());
+            idActual = eligePokemon.idSeleccionado;
+            misPokemons = miConexion.getPokemonPorId(idActual);
+            nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+        }
     }
 }
